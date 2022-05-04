@@ -1,16 +1,10 @@
 data class Chat(
-    var chatId: Int = 0,
-    val senderId: Int = 0,
-    var recipientId: Int = 0,
-    val messages: MutableList<Message> = mutableListOf()
-)
-{
-    data class Message(
-        val messageId: Int = 0,
-        val chatIdForMessages: Int = 0,
-        val senderId: Int = 0,
-        val recipientId: Int = 0,
-        var text: String = "",
-        var isRead: Boolean = false
-    )
+    val chatId: Int = 0,
+    val userId1: String = "",
+    val userId2: String = "",
+    val messages: MutableList<Message> = mutableListOf(),
+) {
+    override fun toString(): String {
+        return "Id: $chatId"
+    }
 }
